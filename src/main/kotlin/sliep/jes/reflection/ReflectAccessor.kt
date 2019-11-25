@@ -4,8 +4,7 @@ import java.lang.reflect.Constructor
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 
-@PublishedApi
-internal interface ReflectAccessor {
+interface ReflectAccessor {
     fun fields(clazz: Class<*>): Array<Field>
     fun constructors(clazz: Class<*>): Array<Constructor<*>>
     fun methods(clazz: Class<*>): Array<Method>

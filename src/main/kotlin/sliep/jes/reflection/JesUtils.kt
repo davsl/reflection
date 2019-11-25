@@ -6,9 +6,7 @@ import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
 @JvmField
-@JvmSynthetic
-@PublishedApi
-internal var accessor: ReflectAccessor = JVMAccessor()
+var accessor: ReflectAccessor = JVMAccessor()
 
 inline val Method.isGetter get() = JU.isGetter(this)
 inline val Method.isSetter get() = JU.isSetter(this)
