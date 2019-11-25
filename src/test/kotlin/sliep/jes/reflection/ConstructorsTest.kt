@@ -17,7 +17,7 @@ class ConstructorsTest {
 
     @Test
     fun testProxy() {
-        val clazz = KLKL::class.java
+        val clazz = KlKl::class.java
         val hack = "I'm gonna kill humans"
         val instance = clazz.implement(InvocationHandler { _, _, _ -> hack })
         Assert.assertEquals(hack, instance.killPeople())
@@ -42,7 +42,7 @@ class ConstructorsTest {
     }
 
 
-    private interface KLKL {
+    private interface KlKl {
         fun killPeople(): String = throw UnsupportedOperationException("1st rule: machines cannot kill humans")
     }
 }

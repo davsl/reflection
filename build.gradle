@@ -1,15 +1,22 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.3.60'
+    id 'com.jfrog.bintray' version '1.8.4'
 }
+ext.VERSION = '1.0-SNAPSHOT'
+ext.ART_ID = 'reflection'
+ext.GROUP_ID = 'sliep.jes'
 
-group 'sliep.jes'
-version '1.0-SNAPSHOT'
+apply from: 'bintray.gradle'
+
+group ext.GROUP_ID
+version ext.VERSION
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
