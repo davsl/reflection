@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sliep.jes.reflection.FieldsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-11-25T11:10:47" hostname="MacBook-Pro-di-HM-Test.local" time="0.005">
+  <properties/>
+  <testcase name="testField" classname="sliep.jes.reflection.FieldsTest" time="0.004"/>
+  <testcase name="testSetField" classname="sliep.jes.reflection.FieldsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Test [Get fields] Repeat count: 10, total time: 0.43ms , avg: 0.04ms 
+]]></system-err>
+</testsuite>
