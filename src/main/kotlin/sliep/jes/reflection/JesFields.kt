@@ -5,12 +5,12 @@ package sliep.jes.reflection
 import java.lang.reflect.Field
 import java.lang.reflect.Modifier
 
-inline fun Class<*>.field(name: String): Field {
+fun Class<*>.field(name: String): Field {
     for (field in accessor.fields(this)) if (field.name.equals(name)) return field
     throw NoSuchFieldException(name)
 }
 
-inline fun Class<*>.field(predicate: (field: Field) -> Boolean): Field {
+fun Class<*>.field(predicate: (field: Field) -> Boolean): Field {
     for (field in accessor.fields(this)) if (predicate(field)) return field
     throw NoSuchFieldException("Class $name contains no field matching the predicate.")
 }

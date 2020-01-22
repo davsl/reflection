@@ -8,7 +8,7 @@ import java.lang.reflect.Modifier
 import java.lang.reflect.Proxy
 import java.lang.reflect.Array as JArray
 
-inline fun <T> Class<T>.constructor(vararg paramTypes: Class<*>?): Constructor<T> {
+fun <T> Class<T>.constructor(vararg paramTypes: Class<*>?): Constructor<T> {
     for (constructor in accessor.constructors(this)) if (JU.isCallableFrom(constructor.parameterTypes, paramTypes))
         return constructor as Constructor<T>
     throw NoSuchMethodException(methodToString(name, "<init>", paramTypes))
